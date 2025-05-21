@@ -15,7 +15,7 @@ class _SplashScreen3State extends State<SplashScreen3> {
   void initState() {
     super.initState();
     Future.delayed(Duration(seconds: 5), () {
-      Navigator.of(context).pop(RouteManager.b);
+      Navigator.of(context).pushNamed(RouteManager.b);
     });
   }
 

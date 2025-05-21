@@ -46,7 +46,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   style: TextStyle(fontSize: 13, fontWeight: FontWeight.w400),
                 ),
                 TextField(
-                  style: TextStyle(fontWeight: FontWeight.w400, fontSize: 15),
+                  style: TextStyle(fontWeight: FontWeight.w600, fontSize: 15),
                   keyboardType: TextInputType.emailAddress,
                   decoration: InputDecoration(
                     hintStyle: TextStyle(
@@ -54,7 +54,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       fontWeight: FontWeight.w400,
                     ),
                     hintText: 'Enter your email',
-                    hintFadeDuration: Duration(milliseconds: 500),
+                    hintFadeDuration: Duration(milliseconds: 700),
                     floatingLabelBehavior: FloatingLabelBehavior.always,
                     border: OutlineInputBorder(
                       borderSide: BorderSide(width: 2, color: Colors.grey),
@@ -65,7 +65,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ],
             ),
           ),
-          Gap(14),
+          Gap(10),
           Padding(
             padding: const EdgeInsets.only(right: 24.0, left: 24.0, top: 24.0),
             child: Column(
@@ -74,18 +74,28 @@ class _LoginScreenState extends State<LoginScreen> {
                 Text(
                   textAlign: TextAlign.start,
                   'Password',
-                  style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w400),
+                  style: TextStyle(fontSize: 13, fontWeight: FontWeight.w400),
                 ),
                 TextField(
-                  style: TextStyle(fontWeight: FontWeight.w400, fontSize: 15),
+                  style: TextStyle(fontWeight: FontWeight.w600, fontSize: 15),
                   keyboardType: TextInputType.visiblePassword,
+                  obscureText: true,
                   decoration: InputDecoration(
+                    suffixIcon: IconButton(
+                      onPressed: () {
+                        IconButton(
+                          onPressed: () {},
+                          icon: Icon(Icons.visibility_rounded),
+                        );
+                      },
+                      icon: Icon(Icons.visibility_off_rounded),
+                    ),
                     hintStyle: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w400,
                     ),
                     hintText: 'Enter your password',
-                    hintFadeDuration: Duration(milliseconds: 500),
+                    hintFadeDuration: Duration(milliseconds: 700),
                     floatingLabelBehavior: FloatingLabelBehavior.always,
                     border: OutlineInputBorder(
                       borderSide: BorderSide(width: 2, color: Colors.grey),
@@ -97,7 +107,7 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(right: 28.0),
+            padding: const EdgeInsets.only(top: 8, right: 28.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -129,58 +139,34 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
           ),
-          // Row(
-          //   children: [
-          //     Checkbox(
-          //       value: true,
-          //       onChanged: (bool? newValue) {
-          //         setState(() {
-          //           a;
-          //         });
-          //       },
-          //     ),
-          //     Gap(10),
-          //     Text(
-          //       'By Creating an account, you have aggred with\nour terms and conditions',
-          //       style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
-          //     ),
-          //   ],
-          // ),
           Gap(14),
           Text.rich(
             style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
             TextSpan(
               text: "Don't have an account?",
               children: [
-                TextSpan(text: 'Signup', style: TextStyle(color: Colors.blue, fontWeight: FontWeight.w600)),
+                TextSpan(
+                  text: 'Signup',
+                  style: TextStyle(
+                    color: Colors.blue,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
               ],
             ),
           ),
           Gap(14),
           Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Divider(
-                color: Colors.black,
-                height: 10,
-                thickness: 10,
-                indent: 14,
-                endIndent: 10,
-              ),
+              Divider(color: Colors.black, height: 20),
               Gap(5),
               Text(
                 'Or login with',
                 style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
               ),
               Gap(5),
-              Divider(
-                color: Colors.black,
-                height: 10,
-                thickness: 10,
-                indent: 14,
-                endIndent: 10,
-              ),
+              Divider(color: Colors.black, height: 10),
             ],
           ),
           Gap(15),
