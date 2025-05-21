@@ -1,5 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
+import 'package:skill_harvest_project/myrouter/routes.dart';
 
 class SplashMain extends StatefulWidget {
   const SplashMain({super.key});
@@ -9,6 +11,14 @@ class SplashMain extends StatefulWidget {
 }
 
 class _SplashMainState extends State<SplashMain> {
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(Duration(seconds: 7), () {
+      Navigator.of(context).pushNamed(RouteManager.b);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,6 +58,14 @@ class _SplashMainState extends State<SplashMain> {
                   fontWeight: FontWeight.w400,
                   color: Colors.white,
                 ),
+              ),
+              Gap(30),
+              LinearProgressIndicator(
+                color: Colors.white,
+                stopIndicatorColor: Colors.white,
+                backgroundColor: Colors.white,
+                value: 20,
+                valueColor: AlwaysStoppedAnimation(Colors.blue),
               ),
             ],
           ),
