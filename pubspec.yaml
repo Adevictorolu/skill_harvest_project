@@ -26,6 +26,7 @@ flutter:
 
   assets:
     - asset/img
+    - asset/img/open-an-account-svgrepo-com.svg
 
   fonts:
     - family: Montserrat

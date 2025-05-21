@@ -39,7 +39,7 @@ class _SplashMainState extends State<SplashMain> {
                   ),
                 ],
                 pause: Duration(seconds: 1),
-                // isRepeatingAnimation: true,
+                isRepeatingAnimation: true,
               ),
               Text(
                 'Learning Your Way',

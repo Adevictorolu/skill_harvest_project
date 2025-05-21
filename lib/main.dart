@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:skill_harvest_project/myrouter/routes.dart';
 import 'package:skill_harvest_project/splashmain.dart';
 
 void main() {
@@ -10,6 +11,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      initialRoute: RouteManager.b,
+      onGenerateRoute: RouteManager.generateRoute,
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
