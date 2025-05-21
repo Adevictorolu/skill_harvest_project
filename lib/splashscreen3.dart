@@ -15,7 +15,7 @@ class _SplashScreen3State extends State<SplashScreen3> {
   void initState() {
     super.initState();
     Future.delayed(Duration(seconds: 5), () {
-      Navigator.of(context).pushNamed(RouteManager.b);
+      Navigator.of(context).pop(RouteManager.b);
     });
   }
 
@@ -66,7 +66,7 @@ class _SplashScreen3State extends State<SplashScreen3> {
                 textAlign: TextAlign.center,
               ),
               Gap(60),
-              SvgPicture.asset(height: 3, 'asset/img/Pavigation (1).svg'),
+              SvgPicture.asset(height: 6, 'asset/img/Pavigation (1).svg'),
             ],
           ),
         ),

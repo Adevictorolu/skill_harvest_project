@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
+import 'package:skill_harvest_project/myrouter/routes.dart';
 
 class SplashScreen1 extends StatefulWidget {
   const SplashScreen1({super.key});
@@ -36,10 +37,7 @@ class _SplashScreen1State extends State<SplashScreen1> {
                 textAlign: TextAlign.center,
               ),
               Gap(15),
-              SvgPicture.asset(
-                height: 3,
-                'asset/img/Pavigation (2).svg'
-              ),
+              SvgPicture.asset(height: 6, 'asset/img/Pavigation (2).svg'),
               Gap(100),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -53,7 +51,9 @@ class _SplashScreen1State extends State<SplashScreen1> {
                       backgroundColor: Colors.blue,
                       fixedSize: Size(170, 40),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).pushNamed(RouteManager.f);
+                    },
                     child: Text(
                       'Sign Up',
                       style: TextStyle(
@@ -73,7 +73,9 @@ class _SplashScreen1State extends State<SplashScreen1> {
                       backgroundColor: Colors.white,
                       fixedSize: Size(170, 40),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).pushNamed(RouteManager.e);
+                    },
                     child: Text(
                       'Log in',
                       style: TextStyle(

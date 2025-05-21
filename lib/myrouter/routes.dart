@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:skill_harvest_project/loginscreen.dart';
+import 'package:skill_harvest_project/signupscreen.dart';
 import 'package:skill_harvest_project/splashmain.dart';
 import 'package:skill_harvest_project/splashscreen1.dart';
 import 'package:skill_harvest_project/splashscreen2.dart';
@@ -25,6 +27,10 @@ class RouteManager {
         return MaterialPageRoute(builder: (context) => SplashScreen2());
       case '/d':
         return MaterialPageRoute(builder: (context) => SplashScreen3());
+      case '/e':
+        return MaterialPageRoute(builder: (context) => LoginScreen());
+      case '/f':
+        return MaterialPageRoute(builder: (context) => SignupScreen());
       default:
         throw FormatException("Route Not Found");
     }
