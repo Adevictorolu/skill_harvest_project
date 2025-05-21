@@ -14,8 +14,8 @@ class _SplashMainState extends State<SplashMain> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 7), () {
-      Navigator.of(context).pushNamed(RouteManager.b);
+    Future.delayed(Duration(seconds: 3), () {
+      Navigator.of(context).pushNamed(RouteManager.c);
     });
   }
 

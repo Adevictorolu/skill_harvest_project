@@ -12,12 +12,13 @@ class SplashScreen2 extends StatefulWidget {
 
 class _SplashScreen2State extends State<SplashScreen2> {
   @override
-  void initState(){
+  void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 5), (){
-      Navigator.of(context).pushNamed(RouteManager.b);
+    Future.delayed(Duration(seconds: 5), () {
+      Navigator.of(context).pushNamed(RouteManager.d);
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,15 +28,23 @@ class _SplashScreen2State extends State<SplashScreen2> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               GestureDetector(
-                onTap: (){
+                onTap: () {
                   Navigator.of(context).pushNamed(RouteManager.b);
                 },
                 child: Padding(
                   padding: const EdgeInsets.all(24.0),
-                  child: Text(
-                    'Skip',
-                    textAlign: TextAlign.right,
-                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.w300),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Text(
+                        'Skip',
+                        textAlign: TextAlign.right,
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),
@@ -50,17 +59,14 @@ class _SplashScreen2State extends State<SplashScreen2> {
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
                 textAlign: TextAlign.center,
               ),
-              Gap(2),
+              Gap(5),
               Text(
                 'Free courses for you to\nfind your way to learning',
                 style: TextStyle(fontWeight: FontWeight.w500, fontSize: 13),
                 textAlign: TextAlign.center,
               ),
-              Gap(20),
-              SvgPicture.asset(
-                height: 3,
-                'asset/img/pavigation.svg',
-              ),
+              Gap(60),
+              SvgPicture.asset(height: 3, 'asset/img/pavigation.svg'),
             ],
           ),
         ),

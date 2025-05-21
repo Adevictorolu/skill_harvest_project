@@ -18,7 +18,7 @@ class _SplashScreen1State extends State<SplashScreen1> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Gap(20),
+              Gap(50),
               SvgPicture.asset(
                 height: 250,
                 width: double.infinity,

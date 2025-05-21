@@ -15,7 +15,7 @@ class _SplashScreen3State extends State<SplashScreen3> {
   void initState() {
     super.initState();
     Future.delayed(Duration(seconds: 5), () {
-      Navigator.of(context).pushNamed(RouteManager.c);
+      Navigator.of(context).pushNamed(RouteManager.b);
     });
   }
 
@@ -33,10 +33,18 @@ class _SplashScreen3State extends State<SplashScreen3> {
                 },
                 child: Padding(
                   padding: const EdgeInsets.all(24.0),
-                  child: Text(
-                    'Skip',
-                    textAlign: TextAlign.right,
-                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.w300),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Text(
+                        'Skip',
+                        textAlign: TextAlign.right,
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),
@@ -51,17 +59,14 @@ class _SplashScreen3State extends State<SplashScreen3> {
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
                 textAlign: TextAlign.center,
               ),
-              Gap(2),
+              Gap(5),
               Text(
                 'Easy and fast learning at\nany time to help you\nimprove various skills',
                 style: TextStyle(fontWeight: FontWeight.w500, fontSize: 13),
                 textAlign: TextAlign.center,
               ),
-              Gap(20),
-              SvgPicture.asset(
-                height: 3,
-                'asset/img/Pavigation (1).svg',
-              ),
+              Gap(60),
+              SvgPicture.asset(height: 3, 'asset/img/Pavigation (1).svg'),
             ],
           ),
         ),
