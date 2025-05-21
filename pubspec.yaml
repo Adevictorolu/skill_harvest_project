@@ -25,8 +25,7 @@ flutter:
   uses-material-design: true
 
   assets:
-    - asset/img
-    - asset/img/open-an-account-svgrepo-com.svg
+    - asset/img/check-in-svgrepo-com.svg
 
   fonts:
     - family: Montserrat
