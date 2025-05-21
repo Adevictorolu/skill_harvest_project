@@ -60,13 +60,6 @@ class _SplashMainState extends State<SplashMain> {
                 ),
               ),
               Gap(30),
-              LinearProgressIndicator(
-                color: Colors.white,
-                stopIndicatorColor: Colors.white,
-                backgroundColor: Colors.white,
-                value: 20,
-                valueColor: AlwaysStoppedAnimation(Colors.blue),
-              ),
             ],
           ),
         ),

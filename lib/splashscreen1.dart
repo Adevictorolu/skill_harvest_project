@@ -2,9 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 
-class SplashScreen1 extends StatelessWidget {
+class SplashScreen1 extends StatefulWidget {
   const SplashScreen1({super.key});
 
+  @override
+  State<SplashScreen1> createState() => _SplashScreen1State();
+}
+
+class _SplashScreen1State extends State<SplashScreen1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,16 +18,12 @@ class SplashScreen1 extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              Gap(20),
               SvgPicture.asset(
-                height: 300,
+                height: 250,
                 width: double.infinity,
-                'asset/img/check-in-svgrepo-com.svg',
+                'asset/img/illustration_3.svg',
               ),
-              // SvgPicture.asset(
-              //   height: 150,
-              //   width: double.infinity,
-              //   'asset/img/inancial-security-svgrepo-com.svg',
-              // ),
               Text(
                 'Create you own\nstudy plan',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
@@ -33,6 +34,11 @@ class SplashScreen1 extends StatelessWidget {
                 'Study according to the\nstudy plan, make study\nmore motivated',
                 style: TextStyle(fontWeight: FontWeight.w500, fontSize: 13),
                 textAlign: TextAlign.center,
+              ),
+              Gap(15),
+              SvgPicture.asset(
+                height: 3,
+                'asset/img/Pavigation (2).svg'
               ),
               Gap(100),
               Row(
