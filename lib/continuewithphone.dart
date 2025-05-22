@@ -58,7 +58,7 @@ class _ContinuewithphoneState extends State<Continuewithphone> {
                             height: 500,
                             width: 300,
                             decoration: BoxDecoration(
-                              color: Colors.white,
+                              color: Colors.green,
                               borderRadius: BorderRadius.all(
                                 Radius.circular(10),
                               ),
@@ -68,7 +68,38 @@ class _ContinuewithphoneState extends State<Continuewithphone> {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 SvgPicture.asset(
-                                  'asset\img/Icon start learning screen.svg',
+                                  'asset/img/Icon start learning screen.svg',
+                                ),
+                                Gap(10),
+                                Text(
+                                  'Congratulations you have \ncompleted your registration!',
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                                ),
+                                Gap(10),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                      fixedSize: Size(double.infinity, 60),
+                                      backgroundColor: Colors.blue,
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.all(
+                                          Radius.circular(15),
+                                        ),
+                                      ),
+                                    ),
+                                    onPressed: () {},
+                                    child: Text(
+                                      'Done',
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 15,
+                                      ),
+                                    ),
+                                  ),
                                 ),
                               ],
                             ),
