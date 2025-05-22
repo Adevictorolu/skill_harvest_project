@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:skill_harvest_project/myrouter/routes.dart';
 import 'package:skill_harvest_project/splashmain.dart';
+import 'package:skill_harvest_project/verifyphone.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,15 +12,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: RouteManager.a,
-      onGenerateRoute: RouteManager.generateRoute,
+      // initialRoute: RouteManager.h,
+      // onGenerateRoute: RouteManager.generateRoute,
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         fontFamily: 'Montserrat',
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: SplashMain(),
+      home: VerifyphoneScreen(),
     );
   }
 }

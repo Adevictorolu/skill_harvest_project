@@ -52,6 +52,7 @@ class _ContinuewithphoneState extends State<Continuewithphone> {
                   suffixIcon: ElevatedButton(
                     onPressed: () {
                       showDialog(
+                        barrierColor: Colors.grey,
                         context: context,
                         builder: (context) {
                           return Column(
@@ -71,7 +72,6 @@ class _ContinuewithphoneState extends State<Continuewithphone> {
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
                                     SvgPicture.asset(
-                                      height: 100,
                                       'asset/img/Icon start learning screen.svg',
                                     ),
                                     Gap(5),
