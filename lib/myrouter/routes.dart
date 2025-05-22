@@ -6,6 +6,7 @@ import 'package:skill_harvest_project/splashmain.dart';
 import 'package:skill_harvest_project/splashscreen1.dart';
 import 'package:skill_harvest_project/splashscreen2.dart';
 import 'package:skill_harvest_project/splashscreen3.dart';
+import 'package:skill_harvest_project/verifyphone.dart';
 
 class RouteManager {
   static String a = '/a';
@@ -34,6 +35,8 @@ class RouteManager {
         return MaterialPageRoute(builder: (context) => SignupScreen());
       case '/g':
         return MaterialPageRoute(builder: (context) => Continuewithphone());
+      case '/h':
+        return MaterialPageRoute(builder: (context) => VerifyphoneScreen());
       default:
         throw FormatException("Route Not Found");
     }

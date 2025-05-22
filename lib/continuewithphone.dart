@@ -47,62 +47,72 @@ class _ContinuewithphoneState extends State<Continuewithphone> {
               padding: const EdgeInsets.all(30.0),
               child: TextField(
                 style: TextStyle(fontWeight: FontWeight.w600, fontSize: 15),
-                keyboardType: TextInputType.emailAddress,
+                keyboardType: TextInputType.phone,
                 decoration: InputDecoration(
                   suffixIcon: ElevatedButton(
                     onPressed: () {
                       showDialog(
                         context: context,
                         builder: (context) {
-                          return Container(
-                            height: 500,
-                            width: 300,
-                            decoration: BoxDecoration(
-                              color: Colors.green,
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(10),
-                              ),
-                            ),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                SvgPicture.asset(
-                                  'asset/img/Icon start learning screen.svg',
-                                ),
-                                Gap(10),
-                                Text(
-                                  'Congratulations you have \ncompleted your registration!',
-                                  style: TextStyle(
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.w400,
+                          return Column(
+                            children: [
+                              Container(
+                                height: 600,
+                                width: 400,
+                                decoration: BoxDecoration(
+                                  border: Border.all(width: 10, color: Colors.red),
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(10),
                                   ),
                                 ),
-                                Gap(10),
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: ElevatedButton(
-                                    style: ElevatedButton.styleFrom(
-                                      fixedSize: Size(double.infinity, 60),
-                                      backgroundColor: Colors.blue,
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.all(
-                                          Radius.circular(15),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    SvgPicture.asset(
+                                      height: 100,
+                                      'asset/img/Icon start learning screen.svg',
+                                    ),
+                                    Gap(5),
+                                    Center(
+                                      child: Text(
+                                        textAlign: TextAlign.center,
+                                        'Congratulations you have \ncompleted your registration!',
+                                        style: TextStyle(
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w400,
+                                          color: Colors.black,
                                         ),
                                       ),
                                     ),
-                                    onPressed: () {},
-                                    child: Text(
-                                      'Done',
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 15,
+                                    Gap(5),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                          fixedSize: Size(100, 40),
+                                          backgroundColor: Colors.blue,
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.all(
+                                              Radius.circular(15),
+                                            ),
+                                          ),
+                                        ),
+                                        onPressed: () {},
+                                        child: Text(
+                                          'Done',
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 15,
+                                          ),
+                                        ),
                                       ),
                                     ),
-                                  ),
+                                  ],
                                 ),
-                              ],
-                            ),
+                              ),
+                            ],
                           );
                         },
                       );
