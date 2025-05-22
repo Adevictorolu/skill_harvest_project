@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
+import 'package:skill_harvest_project/myrouter/routes.dart';
 
 class Continuewithphone extends StatefulWidget {
   const Continuewithphone({super.key});
@@ -51,71 +52,7 @@ class _ContinuewithphoneState extends State<Continuewithphone> {
                 decoration: InputDecoration(
                   suffixIcon: ElevatedButton(
                     onPressed: () {
-                      showDialog(
-                        barrierColor: Colors.grey,
-                        context: context,
-                        builder: (context) {
-                          return Column(
-                            children: [
-                              Container(
-                                height: 600,
-                                width: 400,
-                                decoration: BoxDecoration(
-                                  border: Border.all(width: 10, color: Colors.red),
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.all(
-                                    Radius.circular(10),
-                                  ),
-                                ),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    SvgPicture.asset(
-                                      'asset/img/Icon start learning screen.svg',
-                                    ),
-                                    Gap(5),
-                                    Center(
-                                      child: Text(
-                                        textAlign: TextAlign.center,
-                                        'Congratulations you have \ncompleted your registration!',
-                                        style: TextStyle(
-                                          fontSize: 15,
-                                          fontWeight: FontWeight.w400,
-                                          color: Colors.black,
-                                        ),
-                                      ),
-                                    ),
-                                    Gap(5),
-                                    Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: ElevatedButton(
-                                        style: ElevatedButton.styleFrom(
-                                          fixedSize: Size(100, 40),
-                                          backgroundColor: Colors.blue,
-                                          shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.all(
-                                              Radius.circular(15),
-                                            ),
-                                          ),
-                                        ),
-                                        onPressed: () {},
-                                        child: Text(
-                                          'Done',
-                                          style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 15,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          );
-                        },
-                      );
+                      Navigator.of(context).pushReplacementNamed(RouteManager.h);
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.blue,

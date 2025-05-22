@@ -12,15 +12,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // initialRoute: RouteManager.h,
-      // onGenerateRoute: RouteManager.generateRoute,
+      initialRoute: RouteManager.a,
+      onGenerateRoute: RouteManager.generateRoute,
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         fontFamily: 'Montserrat',
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: VerifyphoneScreen(),
+      home: SplashMain(),
     );
   }
 }
