@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:skill_harvest_project/continuewithphone.dart';
 import 'package:skill_harvest_project/loginscreen.dart';
+import 'package:skill_harvest_project/profilemain.dart';
 import 'package:skill_harvest_project/signupscreen.dart';
 import 'package:skill_harvest_project/splashmain.dart';
 import 'package:skill_harvest_project/splashscreen1.dart';
@@ -37,6 +38,8 @@ class RouteManager {
         return MaterialPageRoute(builder: (context) => Continuewithphone());
       case '/h':
         return MaterialPageRoute(builder: (context) => VerifyphoneScreen());
+      case '/i':
+        return MaterialPageRoute(builder: (context) => ProfilemainScreen());
       default:
         throw FormatException("Route Not Found");
     }

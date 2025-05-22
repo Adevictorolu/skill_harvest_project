@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
+import 'package:skill_harvest_project/myrouter/routes.dart';
 
 class VerifyphoneScreen extends StatefulWidget {
   const VerifyphoneScreen({super.key});
@@ -96,7 +97,9 @@ class _VerifyphoneScreenState extends State<VerifyphoneScreen> {
                                         ),
                                       ),
                                     ),
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      Navigator.of(context).pushReplacementNamed(RouteManager.i);
+                                    },
                                     child: Text(
                                       'Done',
                                       style: TextStyle(
