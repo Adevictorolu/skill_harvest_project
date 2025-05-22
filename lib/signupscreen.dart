@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
+import 'package:skill_harvest_project/myrouter/routes.dart';
 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});
@@ -113,7 +113,9 @@ class _SignupScreenState extends State<SignupScreen> {
                 backgroundColor: Colors.blue,
                 fixedSize: Size(double.infinity, 60),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).pushReplacementNamed(RouteManager.g);
+              },
               child: Center(
                 child: Text(
                   'Create an account',
