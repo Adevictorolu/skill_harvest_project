@@ -52,7 +52,9 @@ class _ContinuewithphoneState extends State<Continuewithphone> {
                 decoration: InputDecoration(
                   suffixIcon: ElevatedButton(
                     onPressed: () {
-                      Navigator.of(context).pushReplacementNamed(RouteManager.h);
+                      Navigator.of(
+                        context,
+                      ).pushReplacementNamed(RouteManager.h);
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.blue,

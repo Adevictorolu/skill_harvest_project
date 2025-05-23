@@ -98,7 +98,9 @@ class _VerifyphoneScreenState extends State<VerifyphoneScreen> {
                                       ),
                                     ),
                                     onPressed: () {
-                                      Navigator.of(context).pushReplacementNamed(RouteManager.i);
+                                      Navigator.of(
+                                        context,
+                                      ).pushReplacementNamed(RouteManager.i);
                                     },
                                     child: Text(
                                       'Done',
